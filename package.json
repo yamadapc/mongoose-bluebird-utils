@@ -15,6 +15,7 @@
     },
 
     "dependencies": {
+        "bluebird": "0.10.*",
         "underscore": "1.5.2"
     },
 
