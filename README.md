@@ -1,4 +1,4 @@
-mongoose-promise-utils
+mongoose-bluebird-utils
 ==================================================
 
 This is basically just a bunch of simple functions that serve as tiny sugars
@@ -11,12 +11,12 @@ But, I find it kind of useful and don't want to flood a helper module into
 Instalation
 --------------------------------------------------
 
-```npm install mongoose-promise-utils```
+```npm install mongoose-bluebird-utils```
 
 ```javascript
 // [...]
 
-var mpUtils = require('mongoose-promise-utils');
+var mpUtils = require('mongoose-bluebird-utils');
 
 // [...]
 ```
@@ -52,7 +52,7 @@ function setNameToJohn (old_name) {
 ```javascript
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    mpUtils = require('mongoose-promise-utils');
+    mpUtils = require('mongoose-bluebird-utils');
 
 function setNameToJohn (old_name) {
   return mpUtils.findOneP(User, { name: old_name }, 'User not found')
