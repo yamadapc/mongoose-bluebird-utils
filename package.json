@@ -1,6 +1,6 @@
 {
     "name":         "mongoose-bluebird-utils",
-    "version":      "0.0.5",
+    "version":      "0.0.6",
     "description":  "A collection of utility functions for manipulating mongoose operations as bluebird promises",
     "author":       "Pedro Tacla Yamada <tacla.yamada@gmail.com>",
     "main":         "./lib/index",
