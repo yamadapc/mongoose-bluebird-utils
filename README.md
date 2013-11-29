@@ -1,4 +1,4 @@
-mongoose-bluebird-utils
+mongoose-bluebird-utils [![Build Status](https://travis-ci.org/yamadapc/mongoose-bluebird-utils.png)](https://travis-ci.org/yamadapc/mongoose-bluebird-utils)
 ==================================================
 
 This is basically just a bunch of simple functions that serve as tiny sugars
