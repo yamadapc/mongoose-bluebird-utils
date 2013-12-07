@@ -15,6 +15,7 @@ describe('mongoose-bluebird-utils', function() {
   };
 
   var model = {
+    count: function(query, cb) { cb(null, Infinity ); },
     findOne: function(query, cb) { cb(null, 'I found it!'); }
   };
 
@@ -25,11 +26,24 @@ describe('mongoose-bluebird-utils', function() {
     }
   };
 
+  var query = {
+    exec: function(cb) { cb(null, Infinity); }
+  };
+
+  describe('invokeP(obj, method_name, args)',
+          promiseTests(mbUtils.invokeP, [idModel, 'findOne', [{_id: true}]], 'found'));
+
   describe('saveP(doc)',
           promiseTests(mbUtils.saveP, [doc], 'saveP!'));
 
   describe('removeP(doc)',
           promiseTests(mbUtils.removeP, [doc], 'removeP!'));
+
+  describe('execP(Query)',
+          promiseTests(mbUtils.execP, [query], Infinity));
+
+  describe('countP(model, query)',
+          promiseTests(mbUtils.countP, [model], Infinity));
 
   describe('findOneP(model, query, not_found_msg)',
           promiseTests(mbUtils.findOneP, [model], 'I found it!'));
