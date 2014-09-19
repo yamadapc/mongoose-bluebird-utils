@@ -1,6 +1,29 @@
 mongoose-bluebird-utils [![Build Status](https://travis-ci.org/yamadapc/mongoose-bluebird-utils.png)](https://travis-ci.org/yamadapc/mongoose-bluebird-utils)
 ==================================================
 
+**DEPRECATED**
+
+This module is deprecated, since it's a better and faster approach, now to just
+promisify your models. This can be archieved with:
+```javascript
+var Promise = require('bluebird');
+var User = mongoose.model('User');
+Promise.promisifyAll(User);
+Promise.promisifyAll(User.prototype);
+
+// Example:
+var user = new User();
+user.saveAsync()
+  // We need to use `spread` because `user.save` yields an array
+  .spread(function(user) {
+  });
+```
+
+The `promisifyAll` bluebird function will add a `Async` posfixed promisified
+method for all the methods in an object. This will be faster and more consistent
+than using this module.
+- - -
+
 This is basically just a bunch of simple functions that serve as tiny sugars
 very often.
 
