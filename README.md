@@ -3,7 +3,7 @@ mongoose-bluebird-utils [![Build Status](https://travis-ci.org/yamadapc/mongoose
 
 **DEPRECATED**
 
-This module is deprecated, since it's a better and faster approach, now to just
+This module is deprecated, since it's a better and faster approach now to just
 promisify your models. This can be achieved with:
 ```javascript
 var Promise = require('bluebird');
