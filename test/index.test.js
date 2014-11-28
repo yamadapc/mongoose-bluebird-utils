@@ -3,7 +3,6 @@
  * Dependencies
  * --------------------------------------------------------------------------*/
 
-require('mocha-as-promised')();
 var should = require('should'),
     Promise = require('bluebird'),
     mbUtils = require('..');
