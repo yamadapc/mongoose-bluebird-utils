@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "bluebird": "^2.3.2",
-    "mocha": ">= 1.4.1",
-    "mocha-as-promised": "latest",
+    "mocha": ">=2.0.1",
     "should": "latest"
   }
 }
